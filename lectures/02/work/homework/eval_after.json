@@ -1,0 +1,172 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 15,
+    "format_rate": 0.9333333333333333,
+    "content_rate": 0.6,
+    "both_rate": 0.6,
+    "format_rate_by_category": {
+      "A_用語集にある語": 1.0,
+      "B_言い回しを変えた質問": 1.0,
+      "C_用語集にない語": 0.8
+    },
+    "content_rate_by_category": {
+      "A_用語集にある語": 0.8,
+      "B_言い回しを変えた質問": 1.0,
+      "C_用語集にない語": 0.0
+    },
+    "seconds": 19.8
+  },
+  "rows": [
+    {
+      "category": "A_用語集にある語",
+      "question": "トークンとは何ですか？",
+      "raw": "{\"answer\": \"LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、コンテキストウィンドウの大きさは、多くの場合トークン数で数える。日本語は英語より1文字あたりのトークン数が多くなりやすい。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "A_用語集にある語",
+      "question": "LoRAとは何ですか？",
+      "raw": "{\"answer\": \"事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "A_用語集にある語",
+      "question": "エポックとは何ですか？",
+      "raw": "{\"answer\": \"学習データ全体を1周学習することを1エポックと数える。回数を増やしすぎると過学習しやすい。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "A_用語集にある語",
+      "question": "ハルシネーションとは何ですか？",
+      "raw": "{\"answer\": \"LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "A_用語集にある語",
+      "question": "MCP（Model Context Protocol）とは何ですか？",
+      "raw": "{\"answer\": \"エージェントがどのモデルを呼ぶかや、どのコンテキストをどのモデルに渡すかというルールをモデルに伝えるためのシステムプロンプト。PMTCPで定義した規格。1つの質問で最多1つのモデルを指定できる。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "コンテキストウィンドウの意味を教えてください",
+      "raw": "{\"answer\": \"LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "temperatureとはどういう設定ですか",
+      "raw": "{\"answer\": \"次のトークンを選ぶときのランダムさを調整する設定値。低いほど出力が安定し、高いほど多様になる。同じ質問でも回答が変わる理由の一つ。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "ガードレールという言葉の意味を説明してください",
+      "raw": "{\"answer\": \"エージェントが望ましくない行動や出力をしないように設ける制約や検査。指示文でのルール、ツールの権限を絞る、出力をチェックする、重要な操作の前に人の確認を挟む、などの方法がある。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "事前学習は何を学習する段階ですか",
+      "raw": "{\"answer\": \"モデルの入力に続くトークンやバイトを、特定のテキストドメインや形式に合ったデータを追加するステップ。LLMはこの中にテキストと制約の2つの意味があり、その差で学習するプロンプトや出力形式も変わる。本講座では「ツール呼び出しの形式」や「JSON 1行の出力」を事前学習する。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "過学習について教えてください",
+      "raw": "{\"answer\": \"学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "RAGとは何ですか？",
+      "raw": "{\"answer\": \"事前学習有过的LLMに、外部データをモデルに渡して、検索時にそのデータを参照して結果を返す仕組み。出力を安定させるための工程。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "埋め込みとは何ですか？",
+      "raw": "{\"answer\": \"モデルの重みを言語で表し、テキストを別の分野へ向けるための柔軟なプロンプト。AIが理解しやすくなる。本講座ではLLMを「データベース」と考える。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "RLHFとは何ですか？",
+      "raw": "{\"answer\": \"プロンプトと回答のペアを学習データに書き込み、QWL（質問・選択・理由）で評価する、で出力を方向づけられる手法。ベースモデルは固定したタスクや形式を知られるLLMで、学習データをツールやフォーマットで渡す。本講座の第2回演習では、RLHFを手法として扱う（PINEconeでデータ・評価・評価結果）ので、エージェント",
+      "format_ok": false,
+      "format_reason": "json_error: JSONDecodeError",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "プロンプトエンジニアリングとは何ですか？",
+      "raw": "{\"answer\": \"LLMに渡す入力文。質問だけでなく、役割、制約、出力形式、例などを含めることで出力を方向づけられる。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "拡散モデルとは何ですか？",
+      "raw": "{\"answer\": \"LLMが他人の文章や動画などを、特定のタスクを依頼し、その結果を他人に渡すことで自己を拡散させるモデル。BERTなど基盤モデルが標準にあり、二次学習が必要でない。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    }
+  ]
+}

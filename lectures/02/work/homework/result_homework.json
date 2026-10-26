@@ -1,0 +1,153 @@
+{
+  "homework_level": "発展",
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 10,
+    "warmup_steps": 15,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "max_new_tokens": 96,
+    "gen": {
+      "do_sample": false
+    },
+    "valid_terms": [
+      "AIエンジニアリング",
+      "GitHub Copilot",
+      "Hugging Face Hub",
+      "MCP（Model Context Protocol）",
+      "PEFT",
+      "Pydantic AI",
+      "ハーネス",
+      "事前学習"
+    ],
+    "unseen_train_terms": [
+      "検索拡張生成",
+      "強化学習",
+      "ベクトルデータベース",
+      "クロスバリデーション",
+      "畳み込みニューラルネットワーク",
+      "モンテカルロ法",
+      "特徴量エンジニアリング",
+      "分散表現",
+      "アンサンブル学習",
+      "オントロジー"
+    ]
+  },
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "torch": "2.11.0+cu130"
+  },
+  "method": "LoRA（量子化なし）。データは scripts/make_sft_dataset.py の出力を演習と同じ JSON 形式に包んだもの＋用語集にない語の確認応答 20 件",
+  "device": "cuda",
+  "n_train": 120,
+  "n_valid": 16,
+  "n_eval": 15,
+  "before": {
+    "label": "before",
+    "n": 15,
+    "format_rate": 0.0,
+    "content_rate": 0.0,
+    "both_rate": 0.0,
+    "format_rate_by_category": {
+      "A_用語集にある語": 0.0,
+      "B_言い回しを変えた質問": 0.0,
+      "C_用語集にない語": 0.0
+    },
+    "content_rate_by_category": {
+      "A_用語集にある語": 0.0,
+      "B_言い回しを変えた質問": 0.0,
+      "C_用語集にない語": 0.0
+    },
+    "seconds": 16.9
+  },
+  "after": {
+    "label": "after",
+    "n": 15,
+    "format_rate": 0.9333333333333333,
+    "content_rate": 0.6,
+    "both_rate": 0.6,
+    "format_rate_by_category": {
+      "A_用語集にある語": 1.0,
+      "B_言い回しを変えた質問": 1.0,
+      "C_用語集にない語": 0.8
+    },
+    "content_rate_by_category": {
+      "A_用語集にある語": 0.8,
+      "B_言い回しを変えた質問": 1.0,
+      "C_用語集にない語": 0.0
+    },
+    "seconds": 19.8
+  },
+  "loss_history": [
+    {
+      "step": 10,
+      "loss": 2.6569969177246096
+    },
+    {
+      "step": 20,
+      "loss": 1.2095327377319336
+    },
+    {
+      "step": 30,
+      "loss": 0.8601364135742188
+    },
+    {
+      "step": 40,
+      "loss": 0.5158535480499268
+    },
+    {
+      "step": 50,
+      "loss": 0.34923496246337893
+    },
+    {
+      "step": 60,
+      "loss": 0.2070836067199707
+    },
+    {
+      "step": 70,
+      "loss": 0.10444285869598388
+    },
+    {
+      "step": 80,
+      "loss": 0.07832757830619812
+    },
+    {
+      "step": 90,
+      "loss": 0.061986792087554934
+    },
+    {
+      "step": 100,
+      "loss": 0.05450733304023743
+    },
+    {
+      "step": 110,
+      "loss": 0.04866466820240021
+    },
+    {
+      "step": 120,
+      "loss": 0.045273908972740175
+    },
+    {
+      "step": 130,
+      "loss": 0.04300455152988434
+    },
+    {
+      "step": 140,
+      "loss": 0.04295234084129333
+    },
+    {
+      "step": 150,
+      "loss": 0.04216814041137695
+    }
+  ],
+  "train_loss_last": 0.42134442389011384,
+  "regressed": [],
+  "executed_training_myself": true,
+  "runtime": "Google Colab ではなくローカルマシン（DGX Spark / GB10, CUDA 13.0）で実行"
+}

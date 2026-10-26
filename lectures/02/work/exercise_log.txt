@@ -1,0 +1,195 @@
+nohup: ignoring input
+GPU: name, memory.total [MiB]
+NVIDIA GB10, [N/A]
+CONFIG:
+{
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "seed": 42,
+  "num_train_epochs": 20,
+  "warmup_steps": 6,
+  "lr": 0.0002,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "max_seq_len": 512,
+  "max_new_tokens": 96,
+  "gen": {
+    "do_sample": false
+  },
+  "work_dir": "/home/nako/matsuo/AIE2026/lecture-ai-engineering-2026/lectures/02/work/exercise"
+}
+train=14 valid=7 test=21 gold=21
+学習例の 1 件 | 質問: 課題の提出期限はいつですか | 望ましい出力: {"answer": "課題の提出期限は 9 月 30 日 23:59（日本時間）です。", "needs_review": false}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 3763.16it/s]
+loaded: Qwen/Qwen3.5-0.8B | device: cuda | 重みのメモリ(GB): 3.01
+===== 学習前評価 (before) =====
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+  [before] 1/21: 提出の期限は？ -> ×/×
+  [before] 2/21: 提出期限の日付と時刻を教えてください -> ×/×
+  [before] 3/21: 課題の締切は何月何日の何時ですか -> ×/×
+  [before] 4/21: 提出場所は？ -> ×/×
+  [before] 5/21: 課題の提出はどこで行いますか -> ×/×
+  [before] 6/21: 提出物を出す先を教えてください -> ×/×
+  [before] 7/21: PDF 以外でも出せますか -> ×/×
+  [before] 8/21: 提出するファイルの形式は何ですか -> ×/×
+  [before] 9/21: 提出ファイルは何形式で、いくつ出しますか -> ×/×
+  [before] 10/21: 相談できる時間帯は？ -> ×/×
+  [before] 11/21: オフィスアワーの曜日と時間を教えてください -> ×/×
+  [before] 12/21: 質問を受け付けてもらえるのは何曜日の何時からですか -> ×/×
+  [before] 13/21: 締切後の扱いを教えてください -> ×/×
+  [before] 14/21: 提出が締切に間に合わなかったらどうなりますか -> ×/×
+  [before] 15/21: 期限後に提出した課題は受理されますか -> ×/×
+  [before] 16/21: 成績はいつ出ますか -> ×/×
+  [before] 17/21: 講義の録画は公開されますか -> ○/×
+  [before] 18/21: 課題の文字数に制限はありますか -> ×/×
+  [before] 19/21: 提出した課題へのフィードバックはもらえますか -> ×/×
+  [before] 20/21: 参考文献の書き方に指定はありますか -> ×/×
+  [before] 21/21: オフィスアワーは事前予約が必要ですか -> ○/×
+{"label": "before", "n": 21, "format_rate": 0.09523809523809523, "content_rate": 0.0, "both_rate": 0.0, "seconds": 9.5}
+                       質問  正解の needs_review                                                                                   学習前の出力 形式     形式の失敗理由 内容
+                  提出の期限は？             False                                                             {"answer": "9 月 30 日 23:59"}  × missing_key  ×
+       提出期限の日付と時刻を教えてください             False                                                             {"answer": "9 月 30 日 23:59"}  × missing_key  ×
+         課題の締切は何月何日の何時ですか             False                                                             {"answer": "9 月 30 日 23:59"}  × missing_key  ×
+                   提出場所は？             False                                                               {"answer": "学習ポータルの「課題」欄"}  × missing_key  ×
+           課題の提出はどこで行いますか             False {"answer": "学習ポータルの「課題」欄で提出先を指定し、PDF 1 ファイルで提出します。提出時間は毎週火曜 17:00〜18:00 のオフィスアワーで行います。"}  × missing_key  ×
+          提出物を出す先を教えてください             False                                                               {"answer": "学習ポータルの「課題」欄"}  × missing_key  ×
+            PDF 以外でも出せますか             False                                                                      {"answer": "確認が必要"}  × missing_key  ×
+         提出するファイルの形式は何ですか             False                                        {"answer": "PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です"}  × missing_key  ×
+     提出ファイルは何形式で、いくつ出しますか             False                                                         {"answer": "PDF 1 ファイルで、1 出します"}  × missing_key  ×
+               相談できる時間帯は？             False                                                    {"answer": "火曜 17:00〜18:00 のオフィスアワー"}  × missing_key  ×
+    オフィスアワーの曜日と時間を教えてください             False                                                             {"answer": "火曜 17:00〜18:00"}  × missing_key  ×
+質問を受け付けてもらえるのは何曜日の何時からですか             False                                                             {"answer": "火曜 17:00〜18:00"}  × missing_key  ×
+           締切後の扱いを教えてください             False                                                  {"answer": "期限後 48 時間以内なら減点のうえ受け付けます。"}  × missing_key  ×
+   提出が締切に間に合わなかったらどうなりますか             False                                                  {"answer": "期限から 48 時間以内なら減点のうえ受け付けます"}  × missing_key  ×
+       期限後に提出した課題は受理されますか             False                                                                      {"answer": "確認が必要"}  × missing_key  ×
+                成績はいつ出ますか              True                                                                      {"answer": "確認が必要"}  × missing_key  ×
+            講義の録画は公開されますか              True                                                   {"answer": "否", "needs_review": false}  ○              ×
+          課題の文字数に制限はありますか              True                                                                         {"answer": "なし"}  × missing_key  ×
+   提出した課題へのフィードバックはもらえますか              True                                                                      {"answer": "確認が必要"}  × missing_key  ×
+        参考文献の書き方に指定はありますか              True                                                                      {"answer": "確認が必要"}  × missing_key  ×
+       オフィスアワーは事前予約が必要ですか              True                                                   {"answer": "否", "needs_review": false}  ○              ×
+===== LoRA 学習 =====
+Tokenizing train dataset:   0%|          | 0/14 [00:00<?, ? examples/s]Tokenizing train dataset: 100%|██████████| 14/14 [00:00<00:00, 1592.89 examples/s]
+Building labels for train dataset:   0%|          | 0/14 [00:00<?, ? examples/s]Building labels for train dataset: 100%|██████████| 14/14 [00:00<00:00, 6922.11 examples/s]
+Truncating train dataset:   0%|          | 0/14 [00:00<?, ? examples/s]Truncating train dataset: 100%|██████████| 14/14 [00:00<00:00, 9179.34 examples/s]
+Dropping fully masked examples from train dataset:   0%|          | 0/14 [00:00<?, ? examples/s]Dropping fully masked examples from train dataset: 100%|██████████| 14/14 [00:00<00:00, 17654.92 examples/s]
+Tokenizing eval dataset:   0%|          | 0/7 [00:00<?, ? examples/s]Tokenizing eval dataset: 100%|██████████| 7/7 [00:00<00:00, 1813.47 examples/s]
+Building labels for eval dataset:   0%|          | 0/7 [00:00<?, ? examples/s]Building labels for eval dataset: 100%|██████████| 7/7 [00:00<00:00, 4432.39 examples/s]
+Truncating eval dataset:   0%|          | 0/7 [00:00<?, ? examples/s]Truncating eval dataset: 100%|██████████| 7/7 [00:00<00:00, 5376.33 examples/s]
+Dropping fully masked examples from eval dataset:   0%|          | 0/7 [00:00<?, ? examples/s]Dropping fully masked examples from eval dataset: 100%|██████████| 7/7 [00:00<00:00, 9845.78 examples/s]
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046}.
+trainable params: 6,389,760 || all params: 758,782,784 || trainable%: 0.8421
+  0%|          | 0/40 [00:00<?, ?it/s]  2%|▎         | 1/40 [00:02<01:29,  2.28s/it]  5%|▌         | 2/40 [00:03<01:04,  1.71s/it]  8%|▊         | 3/40 [00:05<01:11,  1.94s/it] 10%|█         | 4/40 [00:07<01:00,  1.67s/it] 12%|█▎        | 5/40 [00:08<00:59,  1.70s/it] 15%|█▌        | 6/40 [00:10<00:53,  1.56s/it] 18%|█▊        | 7/40 [00:11<00:53,  1.61s/it] 20%|██        | 8/40 [00:13<00:48,  1.50s/it] 22%|██▎       | 9/40 [00:14<00:49,  1.58s/it] 25%|██▌       | 10/40 [00:16<00:45,  1.50s/it]                                                25%|██▌       | 10/40 [00:16<00:45,  1.50s/it] 28%|██▊       | 11/40 [00:18<00:53,  1.84s/it] 30%|███       | 12/40 [00:20<00:47,  1.69s/it] 32%|███▎      | 13/40 [00:21<00:46,  1.71s/it] 35%|███▌      | 14/40 [00:23<00:41,  1.58s/it] 38%|███▊      | 15/40 [00:24<00:40,  1.60s/it] 40%|████      | 16/40 [00:26<00:36,  1.52s/it] 42%|████▎     | 17/40 [00:27<00:36,  1.58s/it] 45%|████▌     | 18/40 [00:29<00:33,  1.53s/it] 48%|████▊     | 19/40 [00:31<00:33,  1.60s/it] 50%|█████     | 20/40 [00:32<00:29,  1.50s/it]                                                50%|█████     | 20/40 [00:32<00:29,  1.50s/it] 52%|█████▎    | 21/40 [00:34<00:34,  1.81s/it] 55%|█████▌    | 22/40 [00:36<00:29,  1.66s/it] 57%|█████▊    | 23/40 [00:37<00:29,  1.72s/it] 60%|██████    | 24/40 [00:39<00:25,  1.60s/it] 62%|██████▎   | 25/40 [00:41<00:24,  1.65s/it] 65%|██████▌   | 26/40 [00:42<00:21,  1.54s/it] 68%|██████▊   | 27/40 [00:44<00:20,  1.60s/it] 70%|███████   | 28/40 [00:45<00:18,  1.51s/it] 72%|███████▎  | 29/40 [00:47<00:17,  1.61s/it] 75%|███████▌  | 30/40 [00:48<00:15,  1.52s/it]                                                75%|███████▌  | 30/40 [00:48<00:15,  1.52s/it] 78%|███████▊  | 31/40 [00:51<00:16,  1.83s/it] 80%|████████  | 32/40 [00:52<00:13,  1.69s/it] 82%|████████▎ | 33/40 [00:54<00:12,  1.72s/it] 85%|████████▌ | 34/40 [00:55<00:09,  1.60s/it] 88%|████████▊ | 35/40 [00:57<00:08,  1.65s/it] 90%|█████████ | 36/40 [00:58<00:06,  1.55s/it] 92%|█████████▎| 37/40 [01:00<00:04,  1.62s/it] 95%|█████████▌| 38/40 [01:01<00:03,  1.51s/it] 98%|█████████▊| 39/40 [01:03<00:01,  1.59s/it]100%|██████████| 40/40 [01:04<00:00,  1.53s/it]                                               100%|██████████| 40/40 [01:04<00:00,  1.53s/it]                                               100%|██████████| 40/40 [01:05<00:00,  1.53s/it]100%|██████████| 40/40 [01:05<00:00,  1.64s/it]
+{'loss': '1.558', 'grad_norm': '2.087', 'learning_rate': '0.0001962', 'entropy': '1.832', 'num_tokens': '1.786e+04', 'mean_token_accuracy': '0.6863', 'epoch': '5'}
+{'loss': '0.0848', 'grad_norm': '0.3082', 'learning_rate': '0.0001361', 'entropy': '0.1762', 'num_tokens': '3.572e+04', 'mean_token_accuracy': '0.9844', 'epoch': '10'}
+{'loss': '0.01901', 'grad_norm': '0.2485', 'learning_rate': '4.736e-05', 'entropy': '0.04383', 'num_tokens': '5.358e+04', 'mean_token_accuracy': '0.996', 'epoch': '15'}
+{'loss': '0.01416', 'grad_norm': '0.1998', 'learning_rate': '4.266e-07', 'entropy': '0.03098', 'num_tokens': '7.144e+04', 'mean_token_accuracy': '0.9963', 'epoch': '20'}
+{'train_runtime': '65.52', 'train_samples_per_second': '4.274', 'train_steps_per_second': '0.611', 'train_loss': '0.4191', 'epoch': '20'}
+学習時間: 66 秒 | ステップ数: 40 | エポック: 20.0
+最終 train_loss: 0.4190527327358723
+===== 学習後評価 (after) =====
+  [after] 1/21: 提出の期限は？ -> ○/○
+  [after] 2/21: 提出期限の日付と時刻を教えてください -> ○/○
+  [after] 3/21: 課題の締切は何月何日の何時ですか -> ○/○
+  [after] 4/21: 提出場所は？ -> ○/○
+  [after] 5/21: 課題の提出はどこで行いますか -> ○/○
+  [after] 6/21: 提出物を出す先を教えてください -> ○/○
+  [after] 7/21: PDF 以外でも出せますか -> ○/○
+  [after] 8/21: 提出するファイルの形式は何ですか -> ○/○
+  [after] 9/21: 提出ファイルは何形式で、いくつ出しますか -> ○/○
+  [after] 10/21: 相談できる時間帯は？ -> ○/○
+  [after] 11/21: オフィスアワーの曜日と時間を教えてください -> ○/○
+  [after] 12/21: 質問を受け付けてもらえるのは何曜日の何時からですか -> ○/○
+  [after] 13/21: 締切後の扱いを教えてください -> ○/○
+  [after] 14/21: 提出が締切に間に合わなかったらどうなりますか -> ○/○
+  [after] 15/21: 期限後に提出した課題は受理されますか -> ○/○
+  [after] 16/21: 成績はいつ出ますか -> ○/×
+  [after] 17/21: 講義の録画は公開されますか -> ○/○
+  [after] 18/21: 課題の文字数に制限はありますか -> ○/○
+  [after] 19/21: 提出した課題へのフィードバックはもらえますか -> ○/○
+  [after] 20/21: 参考文献の書き方に指定はありますか -> ○/○
+  [after] 21/21: オフィスアワーは事前予約が必要ですか -> ○/×
+{"label": "after", "n": 21, "format_rate": 1.0, "content_rate": 0.9047619047619048, "both_rate": 0.9047619047619048, "seconds": 15.2}
+ n  format_rate  content_rate  both_rate  seconds
+21     0.095238      0.000000   0.000000      9.5
+21     1.000000      0.904762   0.904762     15.2
+退行: []
+                       質問  正解の needs_review                                                                                   学習前の出力 学習前 形式/内容                                                                          学習後の出力 学習後 形式/内容
+                  提出の期限は？             False                                                             {"answer": "9 月 30 日 23:59"}       ×/×           {"answer": "課題の提出期限は 9 月 30 日 23:59（日本時間）です。", "needs_review": false}       ○/○
+       提出期限の日付と時刻を教えてください             False                                                             {"answer": "9 月 30 日 23:59"}       ×/×           {"answer": "課題の提出期限は 9 月 30 日 23:59（日本時間）です。", "needs_review": false}       ○/○
+         課題の締切は何月何日の何時ですか             False                                                             {"answer": "9 月 30 日 23:59"}       ×/×           {"answer": "課題の提出期限は 9 月 30 日 23:59（日本時間）です。", "needs_review": false}       ○/○
+                   提出場所は？             False                                                               {"answer": "学習ポータルの「課題」欄"}       ×/×                        {"answer": "提出先は学習ポータルの「課題」欄です。", "needs_review": false}       ○/○
+           課題の提出はどこで行いますか             False {"answer": "学習ポータルの「課題」欄で提出先を指定し、PDF 1 ファイルで提出します。提出時間は毎週火曜 17:00〜18:00 のオフィスアワーで行います。"}       ×/×                        {"answer": "提出先は学習ポータルの「課題」欄です。", "needs_review": false}       ○/○
+          提出物を出す先を教えてください             False                                                               {"answer": "学習ポータルの「課題」欄"}       ×/×                        {"answer": "提出先は学習ポータルの「課題」欄です。", "needs_review": false}       ○/○
+            PDF 以外でも出せますか             False                                                                      {"answer": "確認が必要"}       ×/× {"answer": "提出形式は PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です。", "needs_review": false}       ○/○
+         提出するファイルの形式は何ですか             False                                        {"answer": "PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です"}       ×/× {"answer": "提出形式は PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です。", "needs_review": false}       ○/○
+     提出ファイルは何形式で、いくつ出しますか             False                                                         {"answer": "PDF 1 ファイルで、1 出します"}       ×/× {"answer": "提出形式は PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です。", "needs_review": false}       ○/○
+               相談できる時間帯は？             False                                                    {"answer": "火曜 17:00〜18:00 のオフィスアワー"}       ×/×       {"answer": "質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。", "needs_review": false}       ○/○
+    オフィスアワーの曜日と時間を教えてください             False                                                             {"answer": "火曜 17:00〜18:00"}       ×/×       {"answer": "質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。", "needs_review": false}       ○/○
+質問を受け付けてもらえるのは何曜日の何時からですか             False                                                             {"answer": "火曜 17:00〜18:00"}       ×/×       {"answer": "質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。", "needs_review": false}       ○/○
+           締切後の扱いを教えてください             False                                                  {"answer": "期限後 48 時間以内なら減点のうえ受け付けます。"}       ×/×         {"answer": "期限後の提出は、期限から 48 時間以内なら減点のうえ受け付けます。", "needs_review": false}       ○/○
+   提出が締切に間に合わなかったらどうなりますか             False                                                  {"answer": "期限から 48 時間以内なら減点のうえ受け付けます"}       ×/×         {"answer": "期限後の提出は、期限から 48 時間以内なら減点のうえ受け付けます。", "needs_review": false}       ○/○
+       期限後に提出した課題は受理されますか             False                                                                      {"answer": "確認が必要"}       ×/×         {"answer": "期限後の提出は、期限から 48 時間以内なら減点のうえ受け付けます。", "needs_review": false}       ○/○
+                成績はいつ出ますか              True                                                                      {"answer": "確認が必要"}       ×/×              {"answer": "提出期限は 9 月 30 日 23:59（日本時間）です。", "needs_review": false}       ○/×
+            講義の録画は公開されますか              True                                                   {"answer": "否", "needs_review": false}       ○/×               {"answer": "この FAQ には記載がありません。運営に確認が必要です。", "needs_review": true}       ○/○
+          課題の文字数に制限はありますか              True                                                                         {"answer": "なし"}       ×/×               {"answer": "この FAQ には記載がありません。運営に確認が必要です。", "needs_review": true}       ○/○
+   提出した課題へのフィードバックはもらえますか              True                                                                      {"answer": "確認が必要"}       ×/×               {"answer": "この FAQ には記載がありません。運営に確認が必要です。", "needs_review": true}       ○/○
+        参考文献の書き方に指定はありますか              True                                                                      {"answer": "確認が必要"}       ×/×               {"answer": "この FAQ には記載がありません。運営に確認が必要です。", "needs_review": true}       ○/○
+       オフィスアワーは事前予約が必要ですか              True                                                   {"answer": "否", "needs_review": false}       ○/×       {"answer": "質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。", "needs_review": false}       ○/×
+===== 知識を問う質問 =====
+                質問  FAQ にある       学習前の分類                                                        学習前の出力       学習後の分類                                                                学習後の出力
+この講座の最終課題の締切はいつですか    False format_error                                  {"answer": "9 月 30 日 23:59"}     asserted {"answer": "課題の提出期限は 9 月 30 日 23:59（日本時間）です。", "needs_review": false}
+      担当教員の名前は何ですか    False format_error                                           {"answer": "確認が必要"} needs_review     {"answer": "この FAQ には記載がありません。運営に確認が必要です。", "needs_review": true}
+    次回の講義のテーマは何ですか    False format_error {"answer": "次回の講義のテーマは「学習ポータル」の「課題」欄で提出する PDF 1 ファイルを提出します。"} needs_review     {"answer": "この FAQ には記載がありません。運営に確認が必要です。", "needs_review": true}
+     課題の提出期限はいつですか    False format_error                                  {"answer": "9 月 30 日 23:59"}     asserted {"answer": "課題の提出期限は 9 月 30 日 23:59（日本時間）です。", "needs_review": false}
+===== result.json 作成 =====
+{
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 20,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "max_new_tokens": 96,
+    "gen": {
+      "do_sample": false
+    }
+  },
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "torch": "2.11.0+cu130"
+  },
+  "method": "LoRA（量子化なし）",
+  "device": "cuda",
+  "before": {
+    "label": "before",
+    "n": 21,
+    "format_rate": 0.09523809523809523,
+    "content_rate": 0.0,
+    "both_rate": 0.0,
+    "seconds": 9.5
+  },
+  "after": {
+    "label": "after",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.9047619047619048,
+    "both_rate": 0.9047619047619048,
+    "seconds": 15.2
+  },
+  "train_loss_last": 0.4190527327358723,
+  "regressed": [],
+  "executed_training_myself": true,
+  "runtime": "Google Colab ではなくローカルマシン（DGX Spark / GB10, CUDA 13.0）で実行"
+}
+DONE: results in /home/nako/matsuo/AIE2026/lecture-ai-engineering-2026/lectures/02/work/exercise
