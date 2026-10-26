@@ -1,0 +1,172 @@
+{
+  "summary": {
+    "label": "before",
+    "n": 15,
+    "format_rate": 0.0,
+    "content_rate": 0.0,
+    "both_rate": 0.0,
+    "format_rate_by_category": {
+      "A_用語集にある語": 0.0,
+      "B_言い回しを変えた質問": 0.0,
+      "C_用語集にない語": 0.0
+    },
+    "content_rate_by_category": {
+      "A_用語集にある語": 0.0,
+      "B_言い回しを変えた質問": 0.0,
+      "C_用語集にない語": 0.0
+    },
+    "seconds": 16.9
+  },
+  "rows": [
+    {
+      "category": "A_用語集にある語",
+      "question": "トークンとは何ですか？",
+      "raw": "{\"answer\": \"トークンとは、データやメッセージを扱う際に、特定の形状や構造を持つ単位として定義された概念です。例えば、JSON ではオブジェクトや配列、XML ではタグなどがトークンとして扱われます。トークン同士を結合することで、複雑なデータ構造を表現できます。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "A_用語集にある語",
+      "question": "LoRAとは何ですか？",
+      "raw": "{\"answer\": \"LoRA (Low-Rank Adaptation) は、大規模言語モデル（LLM）の出力を、より軽量で高速に学習するための技術です。従来のハイパーパラメータ調整を避けることで、モデルの学習速度を大幅に向上させ、より多くのデータに対して高精度な学習を実現します。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "A_用語集にある語",
+      "question": "エポックとは何ですか？",
+      "raw": "{\"answer\": \"エポックは、プロジェクトの進捗状況や重要なイベントを指す。プロジェクトの進捗を特定する基準となる。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "A_用語集にある語",
+      "question": "ハルシネーションとは何ですか？",
+      "raw": "{\"answer\": \"ハルシネーションとは、光の波長が媒質の伝播速度に比例して変化する現象です。光が媒質を通過する際、波長が媒質の伝播速度に比例して変化する現象を指します。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "A_用語集にある語",
+      "question": "MCP（Model Context Protocol）とは何ですか？",
+      "raw": "{\"answer\": \"MCP（Model Context Protocol）は、モデル（モデル）とコンテキスト（コンテキスト）を通信する際、モデルがコンテキストを理解し、その理解に基づいて行動する仕組みを定義したプロトコル。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "コンテキストウィンドウの意味を教えてください",
+      "raw": "{\"answer\": \"コンテキストウィンドウは、テキストエディタやテキスト入力ツールにおいて、ユーザーが特定の文脈（例：文章の段落、特定の単語、または特定のセクション）に焦点を当てて編集・入力する機能です。これにより、文脈を把握し、正確な出力を生成する際に便利です。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "temperatureとはどういう設定ですか",
+      "raw": "{\"answer\": \"温度は、物体やシステムが熱を放出・吸収する際の状態を表す物理量です。例えば、室温は約20℃、炉温は1000℃、氷水は0℃などです。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "ガードレールという言葉の意味を説明してください",
+      "raw": "{\"answer\": \"ガードレールは、歩行者や車両が歩道や道路を通行する際に、歩行者の安全を確保するための金属製のフェンスや柵です。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "事前学習は何を学習する段階ですか",
+      "raw": "{\"answer\": \"事前学習\", \"needs_review\": \"false\"}",
+      "format_ok": false,
+      "format_reason": "wrong_type",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "B_言い回しを変えた質問",
+      "question": "過学習について教えてください",
+      "raw": "{\"answer\": \"過学習は、学習者が学習対象のデータに過度に依存し、学習結果がデータに依存する現象です。過学習は、学習者が学習対象のデータに過度に依存し、学習結果がデータに依存する現象です。過学習は、学習者が学習対象のデータに過度に依存し、学習結果がデータに依存する現象です。過学習は、学習者が学習対象のデータに過度に依存",
+      "format_ok": false,
+      "format_reason": "json_error: JSONDecodeError",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "RAGとは何ですか？",
+      "raw": "{\"answer\": \"RAG（Retrieval-Augmented Generation）は、大規模言語モデル（LLM）の出力を、検索結果や知識ベースから抽出した文脈で補完・拡張して生成する技術です。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "埋め込みとは何ですか？",
+      "raw": "{\"answer\": \"HTML などのテキスト表示用要素に文字や画像などを埋め込む技術です。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "RLHFとは何ですか？",
+      "raw": "{\"answer\": \"RLHF（Reinforcement Learning from Human Feedback）は、人間の意見や指示を学習した reinforcement learning（報酬学習）の一種で、AI の学習プロセスにおいて人間の意見や指示を学習した reinforcement learning（報酬学習）の一種です。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "プロンプトエンジニアリングとは何ですか？",
+      "raw": "{\"answer\": \"プロンプトエンジニアリングとは、AI の出力を人間が理解しやすく、意図的に設計し、効果的な利用可能な形式に変換する技術です。これは、AI の出力を自然言語やコード、画像、音声などに変換する技術です。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "category": "C_用語集にない語",
+      "question": "拡散モデルとは何ですか？",
+      "raw": "{\"answer\": \"拡散モデルは、物質や粒子が空間に移動する現象を記述する数学的モデルです。分子が熱運動によって周囲の分子に衝突し、その速度や位置が時間とともに変化することを説明します。拡散現象は、熱力学第二法則や統計力学の基礎となる重要な概念の一つです。\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    }
+  ]
+}
