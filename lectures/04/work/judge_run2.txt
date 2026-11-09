@@ -1,0 +1,17 @@
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+[model] gemini-3.5-flash-lite  temperature=0  rubric=data/eval/rubric.md
+採点中 10 件 ..........
+
+基準別の一致率（自分のラベルと LLM の判定、10 件）
+  根拠               10/10
+  範囲               10/10
+  ヒント             10/10
+  分かりやすさ       10/10
+  回の表示（コード） 10/10
+総合の一致率   10/10   （自動判定できた 10/10 件 = coverage 100%）
+
+要確認 0 件（LLM が unsure にした項目。人が見る）
+
+不一致 0 件
+
+→ lectures/04/judge_result.json に保存しました
