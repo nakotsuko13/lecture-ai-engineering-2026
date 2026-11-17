@@ -1,0 +1,20 @@
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+[model] gemini-3.5-flash-lite
+講義資料によると、LoRAとQLoRAの仕組みや学習対象はそれぞれ以下のようになっています。
+
+* **LoRA**
+  * **固定するもの**：モデルの元の重み（本体）は固定し、学習しません（第2回・PDF p.52）。
+  * **学習するもの**：重みの変化分を表す、細長い2つの小さな行列（低ランクの追加部分、図の橙色の部分）だけを学習します（第2回・PDF p.52）。
+* **QLoRA**
+  * **追加・変更する要素**：LoRAの仕組みに加えて、**元の重みを4bitに圧縮（量子化）**するという処理を組み合わせて行います（第2回・PDF p.51, p.52）。
+
+モデル本体の重みをそのまま動かさず、ごく一部の小さなパラメータだけを効率よく更新する（さらにQLoRAでは本体を4bitに圧縮してメモリを大幅に節約する）ことで、大きなモデルでもGPU1台で微調整できるようにしています（第2回・PDF p.51, p.52）。
+
+--- trace ---
+[tool call]   search_graph({'query': 'LoRA QLoRA 固定 学習 第2回'})
+[tool return] search_graph -> {"seeds": [{"page_id": "lec02-main-p052", "document_id": "lec02-main", "lecture": 2, "document_title": "基盤モデルの仕組み", "sec…
+[time] 回答完了まで 3.78 秒（検索・埋め込みを含む）
+[usage] 入力 6,016 tokens / 出力 270 tokens / モデル応答 2 回
+[cost] 生成APIの推定コスト: $0.002480 USD（埋め込み・索引構築分は含まない）
+exit=0

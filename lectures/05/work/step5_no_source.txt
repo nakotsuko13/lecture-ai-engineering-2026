@@ -1,0 +1,14 @@
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+[model] gemini-3.5-flash-lite
+ご提示いただいた講義資料（第1〜3回）を確認いたしましたが、今回作成したRAGの「実測平均応答時間」や「正答率」に関する具体的な数値やデータは記載されていません。
+
+第2回（PDF p.13）では、同じ質問を複数回行って平均とばらつきを確認することや、評価の一例として5回中3回正しいといった説明用の数値は登場しますが、具体的なシステムの実測値については言及されていません。そのため、現時点の資料からは確認できません。
+
+--- trace ---
+[tool call]   search_materials({'query': '実測平均応答時間 正答率 RAG'})
+[tool return] search_materials -> {"results": [{"page_id": "lec02-main-p013", "document_id": "lec02-main", "lecture": 2, "document_title": "基盤モデルの仕組み", "s…
+[time] 回答完了まで 4.71 秒（検索・埋め込みを含む）
+[usage] 入力 3,821 tokens / 出力 138 tokens / モデル応答 2 回
+[cost] 生成APIの推定コスト: $0.001491 USD（埋め込み・索引構築分は含まない）
+exit=0
