@@ -1,0 +1,19 @@
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+[model] gemini-3.5-flash-lite
+第2回の講義資料によると、LoRAとQLoRAについては以下のように説明されています。
+
+* **LoRAが固定するものと学習するもの**
+  * **固定するもの**：元の重み（本体）は固定して学習しません。
+  * **学習するもの**：細長い2つの小さな行列の積（低ランク）で表される変化分（追加の小さな行列 $A$・$B$）だけを学習します。（第2回・PDF p.52）
+
+* **QLoRAが加えるもの**
+  * LoRAの手法に加え、**元の重みを4bitに圧縮（量子化）**することを加えます。（第2回・PDF p.51, p.52）
+
+--- trace ---
+[tool call]   search_materials({'query': 'LoRA 固定 学習 QLoRA 加える'})
+[tool return] search_materials -> {"results": [{"page_id": "lec02-main-p052", "document_id": "lec02-main", "lecture": 2, "document_title": "基盤モデルの仕組み", "s…
+[time] 回答完了まで 9.57 秒（検索・埋め込みを含む）
+[usage] 入力 3,645 tokens / 出力 181 tokens / モデル応答 2 回
+[cost] 生成APIの推定コスト: $0.001546 USD（埋め込み・索引構築分は含まない）
+exit=0
