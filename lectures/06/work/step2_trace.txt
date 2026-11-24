@@ -1,0 +1,21 @@
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+[server] glossary: コマンドで起動（uv run python -m app.mcp_server）
+[model] gemini-3.5-flash-lite
+[tools] MCP サーバー（app/mcp_servers.json）
+AIE2026の講座における「3レベル」とは、宿題の構成を表す3つの段階のことです。
+
+具体的には以下の3つのレベルに分かれており、**どれか1つに取り組めばその回の宿題は完了**となります。
+
+1. **基礎**：講義内容の確認
+2. **実装**：自分でコードを書く
+3. **発展**：調査や試行
+
+原則として、宿題の採点は行われません。ご自身の理解度や目的に合わせて、取り組むレベルを選んでみてください。
+
+（関連する回：第1回）
+
+--- trace ---
+[tool call]   glossary_search_glossary({'query': '3レベル'})
+[tool return] glossary_search_glossary -> [{"term": "宿題の3レベル", "lecture": 1, "definition": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組…
+[usage] 入力 715 tokens / 出力 152 tokens / モデル応答 2 回
+exit=0
